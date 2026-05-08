@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bayside Haul offers fast, affordable junk removal in Treasure Island, St. Pete, Clearwater &amp; the Tampa Bay area. Call 727-288-4547 for a free quote.">
+  <meta property="og:title" content="Bayside Haul | Treasure Island Junk Removal">
+  <meta property="og:description" content="Bayside Haul offers fast, affordable junk removal in Treasure Island, St. Pete, Clearwater &amp; the Tampa Bay area. Call 727-288-4547 for a free quote.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bayside Haul">
+  <meta property="og:phone_number" content="727-288-4547">
+  <title>Bayside Haul | Treasure Island Junk Removal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0a2d5e;
+      --royal: #1565c0;
+      --bright: #2196f3;
+      --pale: #e3f2fd;
+      --white: #ffffff;
+      --maxw: 1160px;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Nunito", sans-serif;
+      background: var(--white);
+      color: var(--navy);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--maxw));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 78px 0;
+    }
+
+    .t {
+      font-family: "Bebas Neue", sans-serif;
+      letter-spacing: 1px;
+      font-size: clamp(2rem, 5vw, 3.15rem);
+      text-align: center;
+      margin-bottom: 14px;
+      position: relative;
+      padding-bottom: 14px;
+    }
+
+    .t::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: var(--bright);
+      border-radius: 2px;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+
+    .sub {
+      color: var(--royal);
+      font-weight: 700;
+      max-width: 760px;
+      margin: 8px auto 30px;
+      text-align: center;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(10, 45, 94, 0.96);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-top: 2px solid var(--bright);
+      padding: 14px 0;
+      transition: all 0.25s ease;
+    }
+
+    .header.shrink {
+      padding: 7px 0;
+    }
+
+    .header.scrolled {
+      box-shadow: 0 12px 24px rgba(10, 45, 94, 0.2);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(1.5rem, 3vw, 1.95rem);
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    .logo {
+      width: 38px;
+      height: 24px;
+      animation: floatWave 3.8s ease-in-out infinite;
+    }
+
+    .logo path {
+      fill: none;
+      stroke: var(--pale);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @keyframes floatWave {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .links a {
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.94rem;
+    }
+
+    .links a:hover {
+      color: var(--pale);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform 0.2s, box-shadow 0.2s;
+      will-change: transform;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .qbtn {
+      background: var(--bright);
+      color: #fff;
+      padding: 10px 16px;
+      box-shadow: 0 8px 16px rgba(33, 150, 243, 0.35);
+      white-space: nowrap;
+    }
+
+    .badge {
+      background: var(--pale);
+      color: var(--navy);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      border: 1px solid rgba(33, 150, 243, 0.35);
+      white-space: nowrap;
+    }
+
+    .toggle {
+      display: none;
+      background: transparent;
+      border: 0;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 100vh;
+      color: #fff;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 86px;
+      background: linear-gradient(135deg, var(--navy), var(--royal), var(--navy));
+      background-size: 200% 200%;
+      animation: heroShimmer 8s ease-in-out infinite;
+    }
+
+    @keyframes heroShimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .hero-inner {
+      text-align: center;
+      max-width: 860px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(1.95rem, 8vw, 4.9rem);
+      line-height: 1.03;
+      letter-spacing: 1px;
+      text-wrap: balance;
+    }
+
+    .hero p {
+      color: var(--pale);
+      font-weight: 700;
+      font-size: clamp(0.98rem, 3.2vw, 1.3rem);
+      margin: 14px 0 24px;
+    }
+
+    .call {
+      background: var(--bright);
+      color: #fff;
+      padding: 14px 22px;
+      font-size: clamp(1rem, 2.8vw, 1.26rem);
+      animation: pulse 2.1s infinite;
+      box-shadow: 0 8px 20px rgba(33, 150, 243, 0.35);
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(227, 242, 253, 0.2); }
+      50% { box-shadow: 0 0 0 12px rgba(227, 242, 253, 0.06); }
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 128px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      color: var(--pale);
+      font-size: 1.5rem;
+      animation: bounceArrow 1.8s infinite;
+      user-select: none;
+    }
+
+    @keyframes bounceArrow {
+      0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.7; }
+      50% { transform: translateX(-50%) translateY(8px); opacity: 1; }
+    }
+
+    .bubbles {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -90px;
+      border-radius: 50%;
+      background: rgba(227, 242, 253, 0.2);
+      border: 1px solid rgba(227, 242, 253, 0.45);
+      animation: rise linear infinite;
+      will-change: transform, opacity;
+    }
+
+    @keyframes rise {
+      from { transform: translateY(0) scale(1); opacity: 0; }
+      12% { opacity: 1; }
+      to { transform: translateY(-115vh) scale(1.2); opacity: 0; }
+    }
+
+    .divider {
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      z-index: 3;
+      line-height: 0;
+    }
+
+    .divider svg {
+      width: 100%;
+      height: 110px;
+      animation: drift 8s ease-in-out infinite;
+      will-change: transform;
+    }
+
+    @keyframes drift {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(-12px); }
+    }
+
+    .ticker-wrap {
+      background: var(--pale);
+      border-top: 1px solid rgba(21, 101, 192, 0.2);
+      border-bottom: 1px solid rgba(21, 101, 192, 0.2);
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker-track {
+      display: inline-block;
+      padding: 12px 0;
+      font-weight: 800;
+      color: var(--royal);
+      animation: ticker 20s linear infinite;
+      will-change: transform;
+    }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid rgba(21, 101, 192, 0.12);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 10px 24px rgba(10, 45, 94, 0.14);
+      transition: transform 0.22s, box-shadow 0.22s;
+      will-change: transform;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 34px rgba(10, 45, 94, 0.22);
+    }
+
+    .icon {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .card h3 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.8px;
+    }
+
+    .card p {
+      color: var(--royal);
+      font-weight: 700;
+      font-size: 0.98rem;
+    }
+
+    .why {
+      background: var(--pale);
+    }
+
+    .steps .card {
+      text-align: center;
+    }
+
+    .step-number {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      background: #d4ebff;
+      color: var(--navy);
+      display: grid;
+      place-items: center;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      border: 1px solid rgba(21, 101, 192, 0.2);
+    }
+
+    .banner {
+      background: var(--navy);
+      color: #fff;
+      text-align: center;
+      padding: 82px 0;
+    }
+
+    .banner h2 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2rem, 6vw, 4rem);
+      letter-spacing: 1px;
+    }
+
+    .banner p {
+      color: var(--pale);
+      font-weight: 700;
+      margin: 10px 0 24px;
+    }
+
+    .big {
+      background: var(--bright);
+      color: #fff;
+      padding: 16px 24px;
+      font-size: clamp(1.08rem, 4vw, 1.6rem);
+    }
+
+    .review-summary {
+      max-width: 420px;
+      margin: 0 auto 24px;
+      text-align: center;
+      background: var(--pale);
+      border: 1px solid rgba(21, 101, 192, 0.2);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+
+    .review-score {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2.1rem;
+      letter-spacing: 1px;
+    }
+
+    .review-count {
+      color: var(--royal);
+      font-weight: 700;
+    }
+
+    .name {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.55rem;
+      letter-spacing: 0.8px;
+    }
+
+    .stars {
+      color: #f5c542;
+      letter-spacing: 2px;
+      margin: 4px 0 8px;
+    }
+
+    .city {
+      color: var(--bright);
+      font-weight: 800;
+      margin-top: 8px;
+      font-size: 0.93rem;
+    }
+
+    .foot {
+      background: #07306b;
+      color: #fff;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    .fbrand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.72rem;
+      letter-spacing: 1px;
+    }
+
+    .foot p {
+      color: var(--pale);
+      font-weight: 700;
+      margin: 4px 0;
+    }
+
+    .foot a {
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.72s, transform 0.72s;
+      will-change: transform, opacity;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger .reveal:nth-child(1) { transition-delay: 0.06s; }
+    .stagger .reveal:nth-child(2) { transition-delay: 0.12s; }
+    .stagger .reveal:nth-child(3) { transition-delay: 0.18s; }
+    .stagger .reveal:nth-child(4) { transition-delay: 0.24s; }
+    .stagger .reveal:nth-child(5) { transition-delay: 0.3s; }
+    .stagger .reveal:nth-child(6) { transition-delay: 0.36s; }
+
+    .floating-call {
+      display: none;
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--bright);
+      color: #fff;
+      font-size: 1.6rem;
+      z-index: 300;
+      box-shadow: 0 10px 24px rgba(10, 45, 94, 0.35);
+      animation: pulse 2s infinite;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 1024px) {
+      .grid3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 767px) {
+      .section {
+        padding: 64px 0;
+      }
+
+      .toggle {
+        display: inline-flex;
+      }
+
+      .menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 14px 4%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .menu.open {
+        display: flex;
+      }
+
+      .links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .qbtn {
+        width: 100%;
+      }
+
+      .hero {
+        min-height: 92vh;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.8rem, 11vw, 3rem);
+      }
+
+      .big {
+        width: 100%;
+      }
+
+      .grid3 {
+        grid-template-columns: 1fr;
+      }
+
+      .floating-call {
+        display: inline-flex;
+      }
+
+      .scroll-indicator {
+        bottom: 116px;
+      }
+
+      .badge {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <svg class="logo" viewBox="0 0 90 50" aria-hidden="true">
+          <path d="M3 30 C 14 12, 26 12, 37 30 S 60 48, 71 30 S 85 12, 87 24"></path>
+        </svg>
+        <span>BAYSIDE HAUL</span>
+      </a>
+
+      <button class="toggle" id="toggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+      <div class="menu" id="menu">
+        <nav class="links" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn qbtn" href="tel:727-288-4547">📞 Get a Free Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="bubbles" aria-hidden="true">
+        <span class="bubble" style="left:8%;width:14px;height:14px;animation-duration:13s"></span>
+        <span class="bubble" style="left:16%;width:22px;height:22px;animation-duration:16s;animation-delay:1.4s"></span>
+        <span class="bubble" style="left:27%;width:11px;height:11px;animation-duration:11.5s;animation-delay:2.1s"></span>
+        <span class="bubble" style="left:39%;width:18px;height:18px;animation-duration:17s;animation-delay:.6s"></span>
+        <span class="bubble" style="left:51%;width:12px;height:12px;animation-duration:12.5s;animation-delay:2.8s"></span>
+        <span class="bubble" style="left:63%;width:20px;height:20px;animation-duration:15s;animation-delay:1.1s"></span>
+        <span class="bubble" style="left:74%;width:10px;height:10px;animation-duration:12s;animation-delay:3.2s"></span>
+        <span class="bubble" style="left:86%;width:24px;height:24px;animation-duration:18s;animation-delay:.4s"></span>
+      </div>
+
+      <div class="container hero-inner reveal">
+        <h1>We Haul It All — Fast, Affordable &amp; Local</h1>
+        <p>Serving Treasure Island, St. Pete, Clearwater &amp; the Tampa Bay Area</p>
+        <a class="btn call" href="tel:727-288-4547">📞 Call Now: 727-288-4547</a>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">↓</div>
+
+      <div class="divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path fill="#ffffff" d="M0,64 C180,124 360,10 540,42 C720,74 900,130 1080,80 C1260,30 1350,30 1440,72 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section class="ticker-wrap" aria-label="Service area list">
+      <div class="ticker-track">
+        Treasure Island • St. Pete Beach • Clearwater • Largo • Seminole • St. Petersburg • Pinellas Park • Gulfport • and more •
+        Treasure Island • St. Pete Beach • Clearwater • Largo • Seminole • St. Petersburg • Pinellas Park • Gulfport • and more •
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="reveal">
+          <h2 class="t">What We Haul</h2>
+          <p class="sub">From one bulky item to full property cleanouts, Bayside Haul handles the heavy lifting so you can enjoy a cleaner, safer space.</p>
+        </div>
+        <div class="grid3 stagger">
+          <article class="card reveal"><div class="icon">🛋️</div><h3>Furniture Removal</h3><p>We remove sofas, mattresses, tables, and old bedroom sets without damaging your home on the way out.</p></article>
+          <article class="card reveal"><div class="icon">🧊</div><h3>Appliance Hauling</h3><p>Need that broken fridge or washer gone? Our crew handles all the lifting and responsible disposal.</p></article>
+          <article class="card reveal"><div class="icon">🌿</div><h3>Yard Waste Cleanup</h3><p>Branches, brush, and storm debris disappear fast with our dependable pickup service.</p></article>
+          <article class="card reveal"><div class="icon">🧱</div><h3>Construction Debris</h3><p>We clear post-renovation leftovers like tile, drywall, lumber, and demo scraps so your project can move forward.</p></article>
+          <article class="card reveal"><div class="icon">🏠</div><h3>Estate Cleanouts</h3><p>We provide respectful, efficient cleanout help during life transitions with clear communication from start to finish.</p></article>
+          <article class="card reveal"><div class="icon">🛁</div><h3>Hot Tub &amp; Shed Removal</h3><p>Oversized removals are no problem. We dismantle and haul away large structures safely and quickly.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section steps">
+      <div class="container">
+        <div class="reveal">
+          <h2 class="t">How It Works</h2>
+          <p class="sub">A simple process that makes junk removal easy, predictable, and stress-free.</p>
+        </div>
+        <div class="grid3">
+          <article class="card reveal"><div class="step-number">1</div><h3>Call or Text for a Free Quote</h3><p>Tell us what needs to go and we will give you a clear, honest quote with no surprises.</p></article>
+          <article class="card reveal"><div class="step-number">2</div><h3>We Show Up On Time</h3><p>Our crew arrives when promised, ready to work and respectful of your time and property.</p></article>
+          <article class="card reveal"><div class="step-number">3</div><h3>We Haul It Away — Done</h3><p>You point, we lift, load, and clean up so you can enjoy your reclaimed space immediately.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us" class="section why">
+      <div class="container">
+        <div class="reveal">
+          <h2 class="t">Why Choose Us</h2>
+          <p class="sub">Treasure Island residents trust Bayside Haul for responsive scheduling, fair rates, and a crew that treats every property with care.</p>
+        </div>
+        <div class="grid3">
+          <article class="card reveal"><h3>✅ Same-Day Service Available</h3><p>When clutter is in your way, we can often schedule same-day pickup and get your space back quickly.</p></article>
+          <article class="card reveal"><h3>🌊 Locally Owned &amp; Operated</h3><p>We are a local Tampa Bay business, not a franchise, and we take pride in dependable neighbor-to-neighbor service.</p></article>
+          <article class="card reveal"><h3>♻️ Eco-Friendly Disposal</h3><p>Reusable items are donated when possible and materials are sorted responsibly to reduce landfill waste.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="banner">
+      <div class="container reveal">
+        <h2>Ready to Reclaim Your Space?</h2>
+        <p>No job too big or too small. We show up on time, every time.</p>
+        <a class="btn big" href="tel:727-288-4547">727-288-4547</a>
+      </div>
+    </section>
+
+    <section id="reviews" class="section">
+      <div class="container">
+        <div class="reveal">
+          <h2 class="t">What Our Customers Are Saying</h2>
+          <p class="sub">Real feedback from homeowners and property managers across Treasure Island and the greater Tampa Bay area.</p>
+        </div>
+        <div class="review-summary reveal">
+          <div class="review-score">5.0 ★★★★★</div>
+          <div class="review-count">Based on 6 reviews</div>
+        </div>
+        <div class="grid3">
+          <article class="card reveal"><h3 class="name">Megan R.</h3><div class="stars">★★★★★</div><p>They removed two old couches and a broken recliner from our condo in under an hour. The crew was polite, careful on the stairs, and the price was exactly what they quoted.</p><p class="city">St. Pete</p></article>
+          <article class="card reveal"><h3 class="name">Carlos T.</h3><div class="stars">★★★★★</div><p>We needed quick hot tub removal before listing our house, and Bayside Haul handled everything in one visit. Great communication and very fair pricing.</p><p class="city">Treasure Island</p></article>
+          <article class="card reveal"><h3 class="name">Danielle W.</h3><div class="stars">★★★★★</div><p>After our kitchen remodel, they hauled away piles of tile, drywall, and wood scraps. They showed up right on time and left the driveway spotless.</p><p class="city">Clearwater</p></article>
+          <article class="card reveal"><h3 class="name">Bryan L.</h3><div class="stars">★★★★★</div><p>I called in the morning for yard debris pickup after a storm and they were here that afternoon. Friendly team, fast work, and no hidden fees.</p><p class="city">St. Pete Beach</p></article>
+          <article class="card reveal"><h3 class="name">Natalie K.</h3><div class="stars">★★★★★</div><p>They helped with an estate cleanout for my family and made a hard day much easier. Professional, respectful, and incredibly efficient from start to finish.</p><p class="city">Seminole</p></article>
+          <article class="card reveal"><h3 class="name">Eric P.</h3><div class="stars">★★★★★</div><p>Had an old shed and a pile of junk in the backyard, and they knocked it out quickly. Hardworking crew and one of the best service experiences I have had locally.</p><p class="city">Clearwater</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="container">
+      <div class="fbrand">
+        <svg class="logo" viewBox="0 0 90 50" aria-hidden="true">
+          <path d="M3 30 C 14 12, 26 12, 37 30 S 60 48, 71 30 S 85 12, 87 24"></path>
+        </svg>
+        <span>BAYSIDE HAUL</span>
+      </div>
+      <p><a href="tel:727-288-4547">727-288-4547</a></p>
+      <p>Treasure Island's Most Trusted Junk Haulers</p>
+      <p>Copyright <span id="year"></span> Bayside Haul</p>
+    </div>
+  </footer>
+
+  <a class="floating-call" href="tel:7272884547" aria-label="Call Bayside Haul">📞</a>
+
+  <script>
+    (function () {
+      if (!("scrollBehavior" in document.documentElement.style)) {
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+          anchor.addEventListener("click", function (event) {
+            var targetId = this.getAttribute("href");
+            if (!targetId || targetId === "#") {
+              return;
+            }
+            var target = document.querySelector(targetId);
+            if (!target) {
+              return;
+            }
+            event.preventDefault();
+            var top = target.getBoundingClientRect().top + window.pageYOffset - 72;
+            window.scrollTo(0, top);
+          });
+        });
+      }
+    })();
+
+    const header = document.querySelector(".header");
+    const toggle = document.getElementById("toggle");
+    const menu = document.getElementById("menu");
+    const links = document.querySelectorAll(".links a, .qbtn");
+    const revealItems = document.querySelectorAll(".reveal");
+    const yearEl = document.getElementById("year");
+
+    window.addEventListener("scroll", () => {
+      const isScrolled = window.scrollY > 20;
+      header.classList.toggle("shrink", isScrolled);
+      header.classList.toggle("scrolled", isScrolled);
+    });
+
+    toggle.addEventListener("click", () => {
+      const open = menu.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: "0px 0px -24px 0px" });
+
+    revealItems.forEach((el) => io.observe(el));
+    yearEl.textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
